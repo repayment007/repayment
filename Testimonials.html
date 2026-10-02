@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testimonials | Repayment</title>
+    <link rel="icon" type="image/png" href="repayment-icon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                navy: "#0a1628",
+                blue: "#1a3a6b",
+                mid: "#1e4d8c",
+                accent: "#2e6bce",
+                light: "#4a90e2",
+                gold: "#c9a84c",
+                goldlt: "#e6c96e",
+                offwhite: "#f4f6fa",
+                gray: "#8a9ab5",
+                border: "#d6dde8",
+              },
+            },
+            fontFamily: {
+              display: ['"Playfair Display"', "serif"],
+              body: ['"DM Sans"', "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body class="antialiased">
+    <!-- ======== COOKIE BAR ======== -->
+    <div
+      id="cookie-bar"
+      class="fixed bottom-0 inset-x-0 z-50 px-6 py-3 flex flex-wrap items-center justify-between gap-3 text-sm"
+    >
+      <p class="text-blue-200">
+        We use cookies —
+        <a href="#" class="text-blue-300 underline">here's why.</a>
+      </p>
+      <button
+        onclick="document.getElementById('cookie-bar').remove()"
+        class="bg-brand-accent text-white px-4 py-1.5 rounded-full text-xs font-semibold hover:bg-brand-light transition"
+      >
+        OK
+      </button>
+    </div>
+
+    <!-- ======== IMPOSTER WARNING ======== -->
+    
+
+    <!-- ======== NAVIGATION ======== -->
+    <div id="site-header"></div>
+
+    <!-- ======== TESTIMONIALS ======== -->
+    <section class="section-off py-20" id="testimonials">
+      <div class="max-w-7xl mx-auto px-5">
+        <div class="text-center mb-14 reveal">
+          <p
+            class="text-brand-accent text-sm font-semibold uppercase tracking-widest mb-3"
+          >
+            Client Reviews
+          </p>
+          <h2 class="font-display text-4xl font-bold text-brand-navy mb-4">
+            What Our Clients Say
+          </h2>
+          <p class="text-brand-gray max-w-lg mx-auto">
+            Hundreds of verified reviews from scam victims who successfully
+            retrieved their losses using our Investigation Reports.
+          </p>
+        </div>
+
+        <!-- Testimonial cards injected by JS -->
+        <div id="testimonials-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <!-- Skeleton loaders shown while fetching -->
+          <div class="testimonial-card animate-pulse" id="skel-1"><div class="h-4 bg-gray-200 rounded w-24 mb-4"></div><div class="space-y-2 mb-5"><div class="h-3 bg-gray-200 rounded"></div><div class="h-3 bg-gray-200 rounded w-5/6"></div><div class="h-3 bg-gray-200 rounded w-4/6"></div></div><div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-gray-200"></div><div class="space-y-1"><div class="h-3 bg-gray-200 rounded w-24"></div><div class="h-2 bg-gray-200 rounded w-32"></div></div></div></div>
+          <div class="testimonial-card animate-pulse" id="skel-2"><div class="h-4 bg-gray-200 rounded w-24 mb-4"></div><div class="space-y-2 mb-5"><div class="h-3 bg-gray-200 rounded"></div><div class="h-3 bg-gray-200 rounded w-5/6"></div><div class="h-3 bg-gray-200 rounded w-4/6"></div></div><div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-gray-200"></div><div class="space-y-1"><div class="h-3 bg-gray-200 rounded w-24"></div><div class="h-2 bg-gray-200 rounded w-32"></div></div></div></div>
+          <div class="testimonial-card animate-pulse" id="skel-3"><div class="h-4 bg-gray-200 rounded w-24 mb-4"></div><div class="space-y-2 mb-5"><div class="h-3 bg-gray-200 rounded"></div><div class="h-3 bg-gray-200 rounded w-5/6"></div><div class="h-3 bg-gray-200 rounded w-4/6"></div></div><div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-gray-200"></div><div class="space-y-1"><div class="h-3 bg-gray-200 rounded w-24"></div><div class="h-2 bg-gray-200 rounded w-32"></div></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== VIDEO SECTION ======== -->
+    <section class="section-light py-20" id="video-testimonials">
+      <div class="max-w-7xl mx-auto px-5">
+        <div class="text-center mb-14 reveal">
+          <p
+            class="text-brand-accent text-sm font-semibold uppercase tracking-widest mb-3"
+          >
+            Watch Their Stories
+          </p>
+          <h2 class="font-display text-4xl font-bold text-brand-navy mb-4">
+            Video Testimonials
+          </h2>
+        </div>
+
+        <!-- Video embeds injected by JS -->
+        <div id="videos-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Skeleton loaders -->
+          <div class="rounded-xl overflow-hidden shadow-lg border border-brand-border animate-pulse bg-gray-200 aspect-video" id="vskel-1"></div>
+          <div class="rounded-xl overflow-hidden shadow-lg border border-brand-border animate-pulse bg-gray-200 aspect-video" id="vskel-2"></div>
+          <div class="rounded-xl overflow-hidden shadow-lg border border-brand-border animate-pulse bg-gray-200 aspect-video" id="vskel-3"></div>
+        </div>
+        <!-- Hidden message if no videos exist -->
+        <p id="no-videos-msg" class="text-center text-brand-gray mt-8 hidden">No video testimonials are available yet. Check back soon!</p>
+      </div>
+    </section>
+
+    <!-- ======== FOOTER ======== -->
+    <div id="site-footer"></div>
+
+    <!-- ======== TOAST NOTIFICATION ======== -->
+    <div
+      id="toast"
+      class="fixed bottom-20 right-5 z-50 max-w-xs opacity-0 transition-all duration-300 pointer-events-none"
+    >
+      <div
+        class="bg-brand-navy text-white px-5 py-3.5 rounded-xl shadow-2xl border border-brand-accent flex items-center gap-3"
+      >
+        <svg
+          class="w-5 h-5 text-green-400 shrink-0"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M5 13l4 4L19 7"
+          />
+        </svg>
+        <span id="toast-msg" class="text-sm"></span>
+      </div>
+    </div>
+
+    <!-- ======== SCRIPTS ======== -->
+    <script src="auth.js"></script>
+    <script src="components.js"></script>
+    <script src="main.js"></script>
+    <script>
+      // ── Helpers ──────────────────────────────────────────────────────────────
+
+      /** Convert any YouTube share / watch / embed URL → embed URL, or null */
+      function getYouTubeEmbedUrl(url) {
+        if (!url) return null;
+        let videoId = null;
+        try {
+          const u = new URL(url);
+          if (u.hostname === 'youtu.be') {
+            videoId = u.pathname.slice(1).split('?')[0];
+          } else if (u.hostname.includes('youtube.com')) {
+            videoId = u.searchParams.get('v') ||
+                      (u.pathname.startsWith('/embed/') ? u.pathname.split('/embed/')[1].split('?')[0] : null);
+          }
+        } catch (_) {}
+        return videoId ? `https://www.youtube.com/embed/${videoId}?rel=0` : null;
+      }
+
+      /** Build star string from numeric rating */
+      function buildStars(rating) {
+        const full = Math.round(Math.min(Math.max(rating || 5, 0), 5));
+        return '★'.repeat(full) + '☆'.repeat(5 - full);
+      }
+
+      /** Avatar gradient colours pool */
+      const AVATAR_GRADIENTS = [
+        'from-brand-accent to-brand-blue',
+        'from-brand-gold to-brand-accent',
+        'from-brand-blue to-brand-navy',
+        'from-brand-accent to-brand-light',
+        'from-brand-gold to-brand-goldlt',
+        'from-brand-blue to-brand-accent',
+      ];
+
+      // ── Render Testimonials ───────────────────────────────────────────────────
+      async function loadTestimonials() {
+        const grid = document.getElementById('testimonials-grid');
+        const videosGrid = document.getElementById('videos-grid');
+        const noVideosMsg = document.getElementById('no-videos-msg');
+
+        try {
+          const res = await fetch('https://repayment-nmti.onrender.com/api/v1/testimonials', {
+            headers: { 'accept': 'application/json' }
+          });
+          const json = await res.json();
+          const all = Array.isArray(json.resultData) ? json.resultData : (Array.isArray(json) ? json : []);
+
+          // Only show approved testimonials
+          const approved = all.filter(t => t.approved === true);
+          console.log(`TESTIMONIALS: ${approved.length} approved of ${all.length} total`);
+
+          // ── Text Cards ──
+          if (approved.length === 0) {
+            grid.innerHTML = `<p class="col-span-3 text-center text-brand-gray py-8">No testimonials yet. Be the first to share your story!</p>`;
+          } else {
+            grid.innerHTML = approved.map((t, i) => {
+              const initials = (t.authorName || 'A').trim().split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase();
+              const gradient = AVATAR_GRADIENTS[i % AVATAR_GRADIENTS.length];
+              const delay = (i * 0.05).toFixed(2);
+              return `
+                <div class="testimonial-card reveal" style="transition-delay:${delay}s">
+                  <div class="stars mb-3">${buildStars(t.rating)}</div>
+                  <p class="text-brand-gray text-sm leading-relaxed mb-4">"${t.content}"</p>
+                  <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-br ${gradient} flex items-center justify-center text-white font-bold text-sm">${initials}</div>
+                    <div>
+                      <div class="font-semibold text-sm text-brand-navy">${t.authorName || 'Anonymous'}</div>
+                      <div class="text-xs text-brand-gray">${t.country || ''}${t.country && t.scamType ? ' · ' : ''}${t.scamType || ''}</div>
+                    </div>
+                  </div>
+                </div>`;
+            }).join('');
+          }
+
+          // ── Video Cards ──
+          const withVideos = approved.filter(t => getYouTubeEmbedUrl(t.videoUrl));
+          if (withVideos.length === 0) {
+            videosGrid.innerHTML = '';
+            noVideosMsg.classList.remove('hidden');
+          } else {
+            videosGrid.innerHTML = withVideos.map((t, i) => {
+              const embedUrl = getYouTubeEmbedUrl(t.videoUrl);
+              const delay = (i * 0.1).toFixed(2);
+              return `
+                <div class="rounded-xl overflow-hidden shadow-lg border border-brand-border reveal" style="transition-delay:${delay}s">
+                  <div class="aspect-video">
+                    <iframe
+                      src="${embedUrl}"
+                      title="${t.authorName || 'Client'} Testimonial"
+                      class="w-full h-full"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                      loading="lazy"
+                    ></iframe>
+                  </div>
+                  <div class="p-3 bg-white">
+                    <p class="text-xs font-semibold text-brand-navy">${t.authorName || 'Anonymous'}</p>
+                    <p class="text-xs text-brand-gray">${t.country || ''}${t.country && t.scamType ? ' · ' : ''}${t.scamType || ''}</p>
+                  </div>
+                </div>`;
+            }).join('');
+          }
+
+          // Make all new cards visible immediately (they start at opacity:0 via .reveal)
+          grid.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+          videosGrid.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+        } catch (err) {
+          console.error('TESTIMONIALS: Failed to load:', err);
+          // On error — inject static fallback cards so page is never empty
+          grid.innerHTML = `
+            <div class="testimonial-card reveal visible" style="transition-delay:0.05s"><div class="stars mb-3">★★★★★</div><p class="text-brand-gray text-sm leading-relaxed mb-4">"I lost $28,000 to a forex scam. Repayment investigated my case and I recovered over 80% within 7 months. Absolutely incredible."</p><div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-gradient-to-br from-brand-accent to-brand-blue flex items-center justify-center text-white font-bold text-sm">M</div><div><div class="font-semibold text-sm text-brand-navy">Michael T.</div><div class="text-xs text-brand-gray">United Kingdom · Forex Scam</div></div></div></div>
+            <div class="testimonial-card reveal visible" style="transition-delay:0.1s"><div class="stars mb-3">★★★★★</div><p class="text-brand-gray text-sm leading-relaxed mb-4">"After losing my retirement savings to a crypto scam, Repayment's tracing report delivered exactly what they promised."</p><div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-gradient-to-br from-brand-gold to-brand-accent flex items-center justify-center text-white font-bold text-sm">S</div><div><div class="font-semibold text-sm text-brand-navy">Sandra B.</div><div class="text-xs text-brand-gray">United States · Crypto Scam</div></div></div></div>
+            <div class="testimonial-card reveal visible" style="transition-delay:0.15s"><div class="stars mb-3">★★★★★</div><p class="text-brand-gray text-sm leading-relaxed mb-4">"Professional, honest, and kept me updated every step. They recovered $45,000 I had lost to a binary options broker."</p><div class="flex items-center gap-3"><div class="w-10 h-10 rounded-full bg-gradient-to-br from-brand-blue to-brand-navy flex items-center justify-center text-white font-bold text-sm">R</div><div><div class="font-semibold text-sm text-brand-navy">Robert K.</div><div class="text-xs text-brand-gray">Australia · Binary Options</div></div></div></div>
+          `;
+          videosGrid.innerHTML = '';
+          noVideosMsg.classList.remove('hidden');
+        }
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        // Scroll reveal observer (safe — no counter dependency)
+        const revealObs = new IntersectionObserver((entries) => {
+          entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.08 });
+        document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+        loadTestimonials();
+      });
+    </script>
+  </body>
+</html>

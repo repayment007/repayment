@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Chat | Repayment</title>
+    <link rel="icon" type="image/png" href="repayment-icon.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body class="antialiased bg-gray-50">
+    <!-- ======== COOKIE BAR ======== -->
+    <div
+      id="cookie-bar"
+      class="fixed bottom-0 inset-x-0 z-50 px-6 py-3 flex flex-wrap items-center justify-between gap-3 text-sm"
+    >
+      <p class="text-blue-200">
+        We use cookies —
+        <a href="#" class="text-blue-300 underline">here's why.</a>
+      </p>
+      <button
+        onclick="document.getElementById('cookie-bar').remove()"
+        class="bg-brand-accent text-white px-4 py-1.5 rounded-full text-xs font-semibold hover:bg-brand-light transition"
+      >
+        OK
+      </button>
+    </div>
+
+    <!-- ======== IMPOSTER WARNING ======== -->
+    
+
+    <!-- ======== NAVIGATION ======== -->
+    <div id="site-header"></div>
+
+    <!-- ======== WHATSAPP-LIKE CHAT UI ======== -->
+    <main class="bg-[#dfd8d1]">
+      <div class="w-full">
+        
+        <!-- Chat Container -->
+        <div class="bg-[#efeae2] flex flex-col h-[calc(100vh-64px)] min-h-[500px] border border-gray-300 relative overflow-hidden" 
+             style="background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png'); background-size: cover; background-blend-mode: overlay; background-color: rgba(239, 234, 226, 0.9);">
+          
+          <!-- Chat Header -->
+          <div class="bg-[#00a884] px-4 py-3 flex items-center justify-between shadow-sm z-10 shrink-0">
+            <div class="flex items-center gap-3">
+              <button class="md:hidden text-white" aria-label="Go back">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+              </button>
+              
+              <!-- Contact Avatar -->
+              <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center shrink-0 shadow-sm overflow-hidden">
+                <svg class="w-6 h-6 text-[#00a884]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+              </div>
+              
+              <!-- Contact Info -->
+              <div>
+                <h1 class="text-white font-semibold text-sm sm:text-base leading-tight">Repayment Recovery Team</h1>
+                <p class="text-green-100 text-xs">online</p>
+              </div>
+            </div>
+            
+            <div class="flex items-center gap-4 text-white">
+              <svg class="w-5 h-5 cursor-pointer opacity-90 hover:opacity-100" fill="currentColor" viewBox="0 0 20 20"><path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path></svg>
+            </div>
+          </div>
+
+          <!-- Chat Body -->
+          <div class="flex-1 overflow-y-auto p-4 sm:p-5 flex flex-col gap-3 relative z-10">
+            <!-- Date Divider -->
+            <div class="flex justify-center my-2">
+              <span class="bg-white/90 text-gray-500 text-[11px] uppercase font-medium px-3 py-1 rounded-lg shadow-sm border border-gray-100">
+                Today
+              </span>
+            </div>
+
+            <!-- Admin Message 1 -->
+            <div class="flex items-start gap-1">
+              <div class="bg-white rounded-lg rounded-tl-none p-2.5 sm:px-3.5 sm:py-2.5 shadow-sm max-w-[85%] sm:max-w-md relative">
+                <p class="text-[14.5px] text-[#111b21] leading-relaxed">
+                  Welcome to Repayment. You have reached our specialist recovery chat line. 
+                </p>
+                <div class="text-[10px] text-gray-400 text-right mt-1 ml-4 float-right min-w-[2.5rem]">10:00 AM</div>
+              </div>
+            </div>
+
+            <!-- Admin Message 2 -->
+            <div class="flex items-start gap-1">
+              <div class="bg-white rounded-lg rounded-tl-none p-2.5 sm:px-3.5 sm:py-2.5 shadow-sm max-w-[85%] sm:max-w-md relative">
+                <p class="text-[14.5px] text-[#111b21] leading-relaxed">
+                  How can our team assist you today? Please briefly describe the type of scam you experienced so an agent can review your case.
+                </p>
+                <div class="text-[10px] text-gray-400 text-right mt-1 ml-4 float-right min-w-[2.5rem]">10:00 AM</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chat Input -->
+          <div class="bg-[#f0f2f5] px-3 py-2 sm:px-4 sm:py-3 flex items-center gap-2 shrink-0 z-10 border-t border-gray-300">
+            <svg class="w-6 h-6 text-[#54656f] cursor-pointer hidden sm:block shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <svg class="w-6 h-6 text-[#54656f] cursor-pointer shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"></path></svg>
+            
+            <input type="text" placeholder="Type a message" class="flex-1 rounded-full px-4 py-2 sm:py-2.5 bg-white outline-none text-[15px] border-none shadow-sm placeholder-gray-400 text-[#111b21]" />
+            
+            <!-- Send Button -->
+            <button class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#00a884] flex items-center justify-center text-white shrink-0 hover:bg-[#008f6f] transition-colors shadow-sm ml-1" onclick="showToast('Message sent! An agent will join shortly.')">
+              <svg class="w-5 h-5 ml-0.5" fill="currentColor" viewBox="0 0 20 20"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path></svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- ======== FOOTER ======== -->
+    <div id="site-footer"></div>
+
+    <!-- ======== TOAST NOTIFICATION ======== -->
+    <div
+      id="toast"
+      class="fixed bottom-20 right-5 z-50 max-w-xs opacity-0 transition-all duration-300 pointer-events-none"
+    >
+      <div
+        class="bg-brand-navy text-white px-5 py-3.5 rounded-xl shadow-2xl border border-brand-accent flex items-center gap-3"
+      >
+        <svg
+          class="w-5 h-5 text-green-400 shrink-0"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M5 13l4 4L19 7"
+          />
+        </svg>
+        <span id="toast-msg" class="text-sm"></span>
+      </div>
+    </div>
+
+    <!-- ======== SCRIPTS ======== -->
+    <script src="auth.js"></script>
+    <script src="components.js"></script>
+    <script src="main.js"></script>
+    <script>
+      function showToast(msg) {
+        const toast = document.getElementById("toast");
+        document.getElementById("toast-msg").textContent = msg;
+        toast.style.opacity = "1";
+        toast.style.transform = "translateY(-8px)";
+        toast.style.pointerEvents = "auto";
+        setTimeout(() => {
+          toast.style.opacity = "0";
+          toast.style.transform = "translateY(0)";
+          toast.style.pointerEvents = "none";
+        }, 3500);
+      }
+    </script>
+  </body>
+</html>
