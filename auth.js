@@ -4,7 +4,7 @@
 
 const API_CONFIG = {
     // Live backend URL from Swagger documentation
-    BASE_URL: 'https://repayment-nmti.onrender.com', 
+    BASE_URL: 'https://repayment-backend.onrender.com', 
     ENDPOINTS: {
         REGISTER: '/api/v1/auth/register-user',
         LOGIN: '/api/v1/auth/login-user',
