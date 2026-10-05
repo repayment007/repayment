@@ -192,7 +192,10 @@
         const noVideosMsg = document.getElementById('no-videos-msg');
 
         try {
-          const res = await fetch('https://repayment-nmti.onrender.com/api/v1/testimonials', {
+          const apiBase = (typeof API_CONFIG !== 'undefined' && API_CONFIG.BASE_URL)
+            ? API_CONFIG.BASE_URL
+            : 'https://repayment-nmti.onrender.com';
+          const res = await fetch(`${apiBase}/api/v1/testimonials`, {
             headers: { 'accept': 'application/json' }
           });
           const json = await res.json();
