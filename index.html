@@ -1640,7 +1640,10 @@
         console.log('CONSULTATION: Submitting payload', payload);
 
         try {
-          const res = await fetch('https://repayment-nmti.onrender.com/api/v1/consultations', {
+          const apiBase = (typeof API_CONFIG !== 'undefined' && API_CONFIG.BASE_URL)
+            ? API_CONFIG.BASE_URL
+            : 'https://repayment-nmti.onrender.com';
+          const res = await fetch(`${apiBase}/api/v1/consultations`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json', 'accept': 'application/json' },
             body: JSON.stringify(payload)
